@@ -163,3 +163,25 @@ A resiliency layout that keeps duplicate copies of data across multiple disks.
 
 ### NTFS
 The file system used to format the volume and store files.
+## Lab Evidence
+
+### New Disk Before Configuration
+![Disk 1 Unallocated](01-disk1-unallocated.jpg)
+
+### GPT Initialization
+![GPT Initialization](02-gpt-initialization.jpg)
+
+### Simple Volume Created
+![Shared Volume](03-shared-volume.jpg)
+
+### Physical Disks Available for Storage Pool
+![Storage Pool Disks](04-storage-pool-disks.jpg)
+
+### Storage Pool Created
+![Storage Pool Created](05-storage-pool-created.jpg)
+
+### Mirror Storage Layout
+![Mirror Layout](06-mirror-layout.jpg)
+
+### Final Mirrored Storage Space
+![Final Mirrored Volume](07-final-mirrored-volume.jpg)

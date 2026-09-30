@@ -74,3 +74,32 @@ All tests completed successfully.
 ## Result
 
 The NTFS and SMB share permissions were successfully configured and tested. A member of the authorized group was able to access the shared folder from SERVER4 and create, modify, save, and delete a file stored on SERVER3.
+
+## Lab Screenshots
+
+### 1. DepartmentFiles Folder
+![DepartmentFiles Folder](01-departmentfiles-folder.jpg)
+
+### 2. NTFS Permissions Overview
+![NTFS Permissions Overview](02-ntfs-permissions-overview.jpg)
+
+### 3. Finance-Users Added
+![Finance Users Added](03-finance-users-added.jpg)
+
+### 4. Finance-Users Modify Permission
+![Finance Users Modify Permission](04-finance-users-modify.jpg)
+
+### 5. DepartmentFiles Advanced Security
+![DepartmentFiles Advanced Security](05-departmentfiles-advanced-security.jpg)
+
+### 6. Share Permissions
+![Share Permissions Full Control](06-share-permissions-full-control.jpg)
+
+### 7. Accessing DepartmentFiles from SERVER4
+![SERVER4 DepartmentFiles Access](07-server4-departmentfiles-access.jpg)
+
+### 8. Finance Test File
+![Finance Test File](08-finance-test-file.jpg)
+
+### 9. Delete Permission Test
+![Delete Permission Test](09-delete-permission-test.jpg)

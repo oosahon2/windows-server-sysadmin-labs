@@ -129,3 +129,29 @@ The lab was validated by confirming:
 The File Server lab was successfully completed.
 
 A domain user with the correct group membership was able to access and modify files on a centralized SMB share hosted on SERVER3.
+
+## Lab Evidence
+
+### 1. SMB Share Configuration
+![Share Settings](01-share-settings.jpg)
+
+### 2. File and Folder Permissions
+![Permissions Overview](02-permissions-overview.jpg)
+
+### 3. Finance-Users Group Permission
+![Finance Users Permission](03-finance-users-permission.jpg)
+
+### 4. SMB Share Successfully Created
+![Share Created Successfully](04-share-created-successfully.jpg)
+
+### 5. SERVER4 Network and DNS Configuration
+![SERVER4 IP and DNS](05-server4-ip-dns.jpg)
+
+### 6. SERVER4 Domain User Login
+![SERVER4 Domain Login](06-server4-domain-login.jpg)
+
+### 7. Accessing CompanyFiles from SERVER4
+![CompanyFiles Access](07-companyfiles-access.jpg)
+
+### 8. Successful File Creation Test
+![Finance Test File](08-finance-test-file.jpg)

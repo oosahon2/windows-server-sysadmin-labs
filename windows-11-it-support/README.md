@@ -27,6 +27,8 @@ I ran `ipconfig /all` in Command Prompt and observed:
   DHCP server       `192.168.163.254` (VMware virtual DHCP)
   DNS server        `192.168.163.10` (`SERVER2`)
 
+![IP configuration with IPv4, gateway, DHCP and DNS](images/01-ipconfig-all.jpg)
+
 **Lesson:** DHCP assigns network settings; DNS translates names to IP
 addresses; the gateway routes traffic outside the local network. The
 VMware DHCP server and Windows Server DNS server were separate systems.
@@ -41,6 +43,8 @@ ping 192.168.163.2
 
 **Result:** Four replies, 0% loss. **Meaning:** The gateway was
 reachable.
+
+![Gateway ping succeeded](images/02-ping-gateway.jpg)
 
 ### Step 2 --- Ping an external IP
 
@@ -60,6 +64,8 @@ nslookup google.com
 **Result:** DNS server `192.168.163.10` responded with Google IP
 addresses. **Meaning:** Public DNS name resolution worked.
 
+![External ping and nslookup results](images/03-external-ping-and-dns.jpg)
+
 ### Step 4 --- Test HTTPS TCP connectivity in PowerShell
 
 ``` powershell
@@ -70,6 +76,8 @@ Test-NetConnection google.com -Port 443
 `SourceAddress : 192.168.163.128`, `RemotePort : 443`. **Meaning:** A
 TCP connection to port 443 succeeded; it does not independently prove
 the browser or HTTPS page works.
+
+![PowerShell port 443 connectivity succeeded](images/04-test-netconnection-443.jpg)
 
 **Learning moment:** I initially tried `Test-NetConnection` in Command
 Prompt, where it was not recognized. I switched to **PowerShell**, which
@@ -101,6 +109,14 @@ As a standard user, `net session` produced
 Prompt, the command ran and returned `There are no entries in the list.`
 This illustrates the difference between standard and elevated privileges
 and the role of UAC.
+
+![jsmith restored to Users group](images/05-standard-user-membership.jpg)
+
+![net session access denied for standard user](images/06-access-denied.jpg)
+
+![Temporary Administrators membership during controlled test](images/07-temporary-admin-membership.jpg)
+
+*The last screenshot shows a temporary test configuration, not the final account permissions.*
 
 ## 4. Services and Event Viewer
 
@@ -191,23 +207,13 @@ in Edge.\
 **If issue recurs:** Record URL, error message, time, browser, and
 affected devices.
 
-## 8. Screenshots for GitHub
+## 8. Screenshot evidence
 
-Add only screenshots you actually captured, under an `images/` folder.
-Suggested names:
+The seven screenshots above are original photographs shared during the hands-on Windows 11 labs. They show the IP configuration, successful gateway ping, external ping and DNS query, PowerShell port 443 test, standard-user group membership, denied administrative command, and temporary administrators-group membership for the controlled permissions exercise.
 
--   `01-ipconfig-all.png`
--   `02-ping-gateway.png`
--   `03-ping-external.png`
--   `04-nslookup-google.png`
--   `05-test-netconnection-443.png`
--   `06-edge-google-success.png`
--   `07-local-user-membership.png`
--   `08-print-spooler.png`
--   `09-event-viewer.png`
+Screenshots of the Edge browser check, Print Spooler, and Event Viewer are **not included** in this package. These activities are described in the lab notes, but no images are invented.
 
-Omit missing screenshots; do not fabricate evidence. Crop sensitive
-information.
+> Before publishing a public portfolio, review screenshots for any information or reflections you do not want to share.
 
 ## 9. Skills demonstrated
 
